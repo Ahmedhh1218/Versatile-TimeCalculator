@@ -1,0 +1,2 @@
+# Versatile-TimeCalculator
+ "Versatile-TimeCalculator is a multi-functional project that combines the power of a stopwatch, timer, and calculator into a single application. With seamless mode switching, users can effortlessly switch between the stopwatch mode for precise timekeeping, timer mode for countdown functionality, and calculator mode for performing various mathematical operations. Experience the convenience of this all-in-one tool for time management and calculations."
