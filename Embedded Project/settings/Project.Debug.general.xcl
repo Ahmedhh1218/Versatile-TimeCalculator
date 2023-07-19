@@ -1,0 +1,15 @@
+"D:\PROGRAMS\IAR Setup\arm\bin\armPROC.dll" 
+
+"D:\PROGRAMS\IAR Setup\arm\bin\armLMIFTDI.dll" 
+
+"D:\AHMED\ASU\4. SENIOR 1\SEMESTER 7\CSE211 Intro to Embedded\Embedded Project FINAL\Embedded Project\Debug\Exe\Project.out" 
+
+--plugin="D:\PROGRAMS\IAR Setup\arm\bin\armbat.dll" 
+
+--device_macro="D:\PROGRAMS\IAR Setup\arm/config/debugger/TexasInstruments/TM4C123.dmac" 
+
+--flash_loader="D:\PROGRAMS\IAR Setup\arm/config/flashloader/TexasInstruments/FlashTC4_H6_o.board" 
+
+
+
+

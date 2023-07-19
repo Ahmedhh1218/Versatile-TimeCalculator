@@ -1,0 +1,100 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "D$:\PROGRAMS\IAR$ Setup\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "D$:\PROGRAMS\IAR$ Setup\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out
+
+rule MAKEBROWSE
+  command = "D$:\PROGRAMS\IAR$ Setup\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out
+
+rule PDBLINK
+  command = "D$:\PROGRAMS\IAR$ Setup\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out
+
+
+
+#Build steps
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\DIO.c" -xcl_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.xcl" -macro_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.tmp" -icc_path "D$:\PROGRAMS\IAR$ Setup\arm\bin\iccarm.exe"
+  flags = "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\DIO.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\PROGRAMS\IAR$ Setup\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.tmp"
+  rspfile_name = D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.xcl.rsp
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\keypad.c" -xcl_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.xcl" -macro_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.tmp" -icc_path "D$:\PROGRAMS\IAR$ Setup\arm\bin\iccarm.exe"
+  flags = "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\keypad.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\PROGRAMS\IAR$ Setup\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.tmp"
+  rspfile_name = D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.xcl.rsp
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\LCD.c" -xcl_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.xcl" -macro_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.tmp" -icc_path "D$:\PROGRAMS\IAR$ Setup\arm\bin\iccarm.exe"
+  flags = "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\LCD.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\PROGRAMS\IAR$ Setup\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.tmp"
+  rspfile_name = D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.xcl.rsp
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\main.c" -xcl_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.xcl" -macro_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.tmp" -icc_path "D$:\PROGRAMS\IAR$ Setup\arm\bin\iccarm.exe"
+  flags = "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\main.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\PROGRAMS\IAR$ Setup\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.tmp"
+  rspfile_name = D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.xcl.rsp
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\systick.c" -xcl_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.xcl" -macro_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.tmp" -icc_path "D$:\PROGRAMS\IAR$ Setup\arm\bin\iccarm.exe"
+  flags = "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\systick.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\PROGRAMS\IAR$ Setup\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.tmp"
+  rspfile_name = D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.xcl.rsp
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Timer.c" -xcl_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.xcl" -macro_file "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.tmp" -icc_path "D$:\PROGRAMS\IAR$ Setup\arm\bin\iccarm.exe"
+  flags = "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Timer.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\PROGRAMS\IAR$ Setup\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.tmp"
+  rspfile_name = D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.xcl.rsp
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.pbi : INDEXER D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.xcl |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\DIO.c
+  flags = "-out=D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.pbi" -f "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.xcl"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.pbi : INDEXER D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.xcl |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\keypad.c
+  flags = "-out=D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.pbi" -f "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.xcl"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.pbi : INDEXER D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.xcl |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\LCD.c
+  flags = "-out=D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.pbi" -f "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.xcl"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.pbi : INDEXER D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.xcl |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\main.c
+  flags = "-out=D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.pbi" -f "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.xcl"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.pbi : INDEXER D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.xcl |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\systick.c
+  flags = "-out=D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.pbi" -f "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.xcl"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.pbi : INDEXER D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.xcl |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Timer.c
+  flags = "-out=D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.pbi" -f "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.xcl"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project.pbw : MAKEBROWSE D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project.pbd
+  flags = "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project.pbd" -output "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project.pbw"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part0.pbi : PDBLINK D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.pbi |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.pbi
+  flags = -M "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part0.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\DIO.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\keypad.pbi"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part1.pbi : PDBLINK D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.pbi |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.pbi
+  flags = -M "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part1.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\LCD.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\main.pbi"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part2.pbi : PDBLINK D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.pbi |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.pbi
+  flags = -M "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part2.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\systick.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Timer.pbi"
+
+build D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project.pbd : PDBLINK D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part0.pbi |  $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part1.pbi $
+D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part2.pbi
+  flags = -M "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project.pbd" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part0.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part1.pbi" "D$:\AHMED\ASU\4.$ SENIOR$ 1\SEMESTER$ 7\CSE211$ Intro$ to$ Embedded\Embedded$ Project$ FINAL\Embedded$ Project\Debug\BrowseInfo\Project_part2.pbi"
+
